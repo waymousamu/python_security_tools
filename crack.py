@@ -1,11 +1,10 @@
 import crypt
 
 def testPass(cryptPass):
-    if cryptPass[0:3] == "$6$"
-        salt = cryptPass[0:9]
-    else
+    if cryptPass[0:3] == "$6$":
+        salt = cryptPass[0:11]
+    else:
         salt = cryptPass[0:2]
-    print "[+] Salt is:"+salt+"\n"
     dictFile = open('dictionary.txt','r')
     for word in dictFile.readlines():
         word = word.strip('\n')
